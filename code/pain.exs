@@ -3,11 +3,18 @@ defmodule HASH do
     :crypto.hash(:md5 , text) |> Base.encode16()
   end
 
-  text = text 
-    |> File.stream! \
-    |> Enum.map(&String.trim/1) \
-    |> Enum.map(&String.reverse/1) \
-    |> Enum.join("\n")
-    File.write!("text4.txt", text)
+  def md5onlist(text, path) do
+    File.read!(path) |>String.split(",") |> Enum.filter( fn x -> if md5(x) == String.upcase(text) do x end end)
+  end
+
+  def main(text, path) do
+    res=md5onlist(text, path)
+    if res == [] do
+      
+    else
+      IO.puts(res)
+    end
+
+  end
 
 end
