@@ -1,5 +1,4 @@
 defmodule HASH do
-  {:alphabetify, "~> 1.1"}
   def md5(text) do
     :crypto.hash(:md5 , text) |> Base.encode16()
   end
@@ -10,7 +9,7 @@ defmodule HASH do
 
 
   def iterations(string) do
-    :alphabetify.seed_hash("AAAA")
+    Alphabetify.seed_hash("AAAA")
   end
 
   def auxiliar(string, text) do

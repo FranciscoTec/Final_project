@@ -1,0 +1,3 @@
+%{
+  "alphabetify": {:hex, :alphabetify, "1.1.0", "8515902e1306750d36f41c43fc24fc3d2eb4d4745398cea2e900143aaab32d44", [:mix], [], "hexpm", "be4fcba5eff7aed4050feb5d6d762a5c8b7ad089cdce1cff175e1b82b0e71602"},
+}
