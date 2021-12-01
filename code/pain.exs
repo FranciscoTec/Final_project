@@ -7,10 +7,24 @@ defmodule HASH do
     File.read!(path) |>String.split(",") |> Enum.filter( fn x -> if md5(x) == String.upcase(text) do x end end)
   end
 
+
+  def iterations() do
+    :
+  end
+
+  def auxiliar(string, text) do
+    if md5(string) == text do
+      IO.puts(string)
+    else
+       step = iterations(string)
+      auxiliar(step, text)
+    end
+  end
+
   def main(text, path) do
     res=md5onlist(text, path)
     if res == [] do
-      
+
     else
       IO.puts(res)
     end
