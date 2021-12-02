@@ -19,7 +19,8 @@
 
 ## 3. Solution
 
-The program will iterate through all posible combination of chars and use the hash function md5 to get corresponing hash of the combination to then compare it to the given hash of the original string 
+
+The program will iterate through all combinations given in a csv file and if none of those matches it will then iterate through  all posible combination of chars and use the hash function md5 to get corresponing hash of the combination to then compare it to the given hash of the original string 
 Ei:
 given string "Hola" corresponding hash "f688ae26e9cfa3ba6235477831d5122e"
 
@@ -37,7 +38,3 @@ the program wil begin iterating like this:
 
 
 until it finds a string which hash corresponds to the orignal string's hash.
-
-## 4. Sources
-
-*Rosettacode.org.(2021). MD5 [online] recuperado de "https://rosettacode.org/wiki/MD5"*

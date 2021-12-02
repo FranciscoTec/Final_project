@@ -58,6 +58,34 @@ defmodule Project do
     end
   end
 
+  def iterations([d,c,b,a]) do
+    if a == "\d" && b== "\d" && c == "\d" && d == "\d"do
+      nil
+    else
+      if a == "\d" && b == "\d" && c == "\d"do
+        <<letter::utf8>> = d
+        list = [List.to_string([letter+1]),"!","!","!"]
+        list
+      else
+        if a == "\d" && b == "\d" do
+          <<letter::utf8>> = c
+          list = [d,List.to_string([letter+1]),"!","!"]
+          list
+        else
+          if a == "\d"  do
+            <<letter::utf8>> = b
+            list = [d,c,List.to_string([letter+1]),"!"]
+          list
+          else
+            <<letter::utf8>> = a
+            list = [d,c,b,List.to_string([letter+1])]
+          list
+          end
+        end
+      end
+    end
+  end
+
   def auxiliar(string, text) do
     if md5(List.to_string(string)) == String.upcase(text) do
       IO.puts(List.to_string(string))
