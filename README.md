@@ -38,3 +38,6 @@ the program wil begin iterating like this:
 
 
 until it finds a string which hash corresponds to the orignal string's hash.
+
+For a reference the hash "}}}}" took 295.1409 second using an Intel(R) Core(TM) i7-8750H CPU @ 2.20GHz, 2208 Mhz
+
